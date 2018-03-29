@@ -1,5 +1,5 @@
 
-class Cat
+class Pet
   attr_reader :color, :breed
   attr_accessor :name
 
@@ -22,13 +22,25 @@ class Cat
     end
     @hungry
   end
+end
+
+class Cat < Pet
 
   def speak
     puts "Meow!"
   end
-
 end
 kitty = Cat.new("grey", "Persian")
+
+class Dog < Pet
+
+  def speak
+    puts "Woof!"
+  end
+end
+puppy = Dog.new("black", "Staffordshire Terrier")
+puppy.speak
+puts puppy.breed
 
 puts "Let's inspect our new cat:"
 puts kitty.inspect
